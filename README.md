@@ -18,6 +18,8 @@ The application sets up two virtual assistants, each configured to mimic the per
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/GPTvsGPT.git
-cd GPTvsGPT
+git clone https://github.com/yourusername/Cortana_Master_Chief_GPT
+.git
+cd Cortana_Master_Chief_GPT
+
 
