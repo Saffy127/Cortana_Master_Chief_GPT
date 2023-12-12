@@ -1,0 +1,89 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0e0e10; /* Dark background */
+    color: #d0d0d0; /* Light text */
+    margin: 0;
+    padding: 20px;
+}
+
+#app {
+    max-width: 600px;
+    margin: auto;
+    background: #1b1b1f; /* Dark panel */
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+}
+
+#conversation {
+    background-color: #252529; /* Slightly lighter dark background */
+    border-radius: 8px;
+    padding: 10px;
+    min-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+}
+.assistant-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    border-radius: 50%; /* Circular icons */
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.message {
+    display: flex;
+    align-items: center;
+}
+
+.message {
+    max-width: 80%;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+    padding: 8px 15px;
+    border-radius: 20px;
+}
+
+.assistant-1 {
+    background-color: green; /* Green for Master Chief */
+    margin-left: 10px;
+    text-align: left;
+}
+
+.assistant-2 {
+    background-color: purple; /*Purple for Cortana */
+    margin-right: 10px;
+    text-align: right;
+    margin-left: auto; /* Align to the right */
+}
+
+#start-conversation {
+    background-color: #4caf50; /* Green start button */
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+#start-conversation:hover {
+    background-color: #388e3c; /* Darker green on hover */
+}
+
+@media only screen and (max-width: 600px) {
+    #app {
+        width: 90%;
+    }
+
+    .message {
+        max-width: 70%;
+    }
+}
+
+#loading {
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+}
