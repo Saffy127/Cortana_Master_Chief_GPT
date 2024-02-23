@@ -7,7 +7,12 @@ body {
 }
 
 #app {
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    align-items: center; /* Added */
+    justify-content: flex-start; /* Added */
     max-width: 600px;
+    width: 100%; /* Added for better responsiveness */
     margin: auto;
     background: #1b1b1f; /* Dark panel */
     padding: 20px;
@@ -16,13 +21,19 @@ body {
 }
 
 #conversation {
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    align-items: flex-start; /* Align messages to the start; Added */
     background-color: #252529; /* Slightly lighter dark background */
     border-radius: 8px;
     padding: 10px;
     min-height: 300px;
+    max-height: 500px; /* Set a max-height for scrolling; Added */
     overflow-y: auto;
+    width: 100%; /* Added */
     margin-bottom: 20px;
 }
+
 .assistant-icon {
     width: 30px; /* Adjust size as needed */
     height: 30px;
@@ -32,26 +43,29 @@ body {
 }
 
 .message {
-    display: flex;
-    align-items: center;
-}
-
-.message {
+    display: flex; /* Reinforced */
+    align-items: center; /* Reinforced */
     max-width: 80%;
     margin-bottom: 10px;
     word-wrap: break-word;
     padding: 8px 15px;
     border-radius: 20px;
+    background-color: #f0f0f0; /* Added for better contrast */
+    color: #000; /* Added for better readability */
+}
+
+.assistant-1, .assistant-2 {
+    flex: 1; /* Added */
 }
 
 .assistant-1 {
-    background-color: green; /* Green for Master Chief */
+    background-color: #4caf50; /* Adjusted for consistency */
     margin-left: 10px;
     text-align: left;
 }
 
 .assistant-2 {
-    background-color: purple; /*Purple for Cortana */
+    background-color: #9c27b0; /* Adjusted for consistency */
     margin-right: 10px;
     text-align: right;
     margin-left: auto; /* Align to the right */
@@ -74,11 +88,12 @@ body {
 
 @media only screen and (max-width: 600px) {
     #app {
-        width: 90%;
+        width: 90%; /* Adjusted */
+        padding: 10px; /* Adjusted for smaller screens */
     }
 
     .message {
-        max-width: 70%;
+        max-width: 70%; /* Reinforced */
     }
 }
 
@@ -86,4 +101,9 @@ body {
     color: #ffffff;
     text-align: center;
     padding: 10px;
+    display: none; /* Ensure it's hidden by default */
+    justify-content: center; /* Center loading text; Added */
+    align-items: center; /* Center vertically; Added */
+    width: 100%; /* Added */
 }
+
